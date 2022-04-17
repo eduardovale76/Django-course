@@ -1,3 +1,4 @@
 DEBUG=False
 SECRET_KEY=Define your secret key
 ALLOWED_HOSTS=localhost, 127.0.0.1, py-prodjango.herokuapp.com
+INTERNAL_IPS=127.0.0.1
