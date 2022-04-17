@@ -234,11 +234,10 @@
         },
         "mccabe": {
             "hashes": [
-                "sha256:c6f88ac33667c89d6588e5189334d051f186f4dd3ae5139586af54677c36b5a8",
-                "sha256:de9bbfe5b771e4c11b1521f3e338fe265a12296b59302f43a3bbf3e02d4b98b1"
+                "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325",
+                "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"
             ],
-            "index": "pypi",
-            "version": "==0.6.0"
+            "version": "==0.7.0"
         },
         "packaging": {
             "hashes": [
@@ -579,11 +578,10 @@
         },
         "mccabe": {
             "hashes": [
-                "sha256:c6f88ac33667c89d6588e5189334d051f186f4dd3ae5139586af54677c36b5a8",
-                "sha256:de9bbfe5b771e4c11b1521f3e338fe265a12296b59302f43a3bbf3e02d4b98b1"
+                "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325",
+                "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"
             ],
-            "index": "pypi",
-            "version": "==0.6.0"
+            "version": "==0.7.0"
         },
         "packaging": {
             "hashes": [
