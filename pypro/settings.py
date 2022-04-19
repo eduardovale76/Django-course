@@ -46,8 +46,8 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     #my apps
-    #'base.apps.BaseConfig',
-    'base',
+    'base.apps.BaseConfig',
+    #'base',
 ]
 
 
