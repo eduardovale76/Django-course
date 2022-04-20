@@ -45,6 +45,7 @@ urllib3 = "==1.26.9"
 typing-extensions = "==4.1.1"
 upgrade-requirements = "==1.7.0"
 django-debug-toolbar = "*"
+sentry-sdk = "*"
 
 [dev-packages]
 flake8 = "*"
