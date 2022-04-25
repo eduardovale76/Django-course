@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #my apps
     'base.apps.BaseConfig',
+    'aperitivo.apps.AperitivoConfig',
     #'base',
 ]
 
