@@ -11,7 +11,7 @@
                 <h3 class="mt-4 mb-3">Lista de vídeos aperitivos</h3>
                 <ol>
                     {% for video in videos %}
-                    <li>{{video.titulo | default:'Faltando Título'}}</li>
+                    <li><a href="{{ video.get_absolute_url }}">{{video.titulo | default:'Faltando Título'}}</a></li>
                     {% empty %}
                     <h3 class='text-danger'>Não foi encontrado nenhum vídeo</h3>
                     {% endfor %}

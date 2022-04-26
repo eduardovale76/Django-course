@@ -1,10 +1,13 @@
 from django.shortcuts import render
+from django.urls import reverse
 
 class Video:
     def __init__(self, slug, titulo, youtube_id):
         self.slug = slug
         self.titulo = titulo
         self.youtube_id = youtube_id
+    def get_absolute_url(self):
+        return reverse('aperitivo:video', args=(self.slug,))
         
 videos = [
    Video('motivacao','Video Aperitivo: Motivação', '23tusPiiNZk'),
