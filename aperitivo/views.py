@@ -2,6 +2,7 @@ from unittest.util import _MAX_LENGTH
 from django.shortcuts import render, get_object_or_404
 from .models import Video
 
+
         
 videos = [
    Video(slug='motivacao',titulo='Video Aperitivo: Motivação', youtube_id='23tusPiiNZk'),
