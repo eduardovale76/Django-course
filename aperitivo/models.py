@@ -1,3 +1,10 @@
+from django.urls import reverse
 from django.db import models
 
-# Create your models here.
+class Video(models.Model):
+    slug = models.CharField(max_length=32)
+    titulo = models.CharField(max_length=32)
+    youtube_id = models.CharField(max_length=32)
+    
+    def get_absolute_url(self):
+        return reverse('aperitivo:video', args=(self.slug,))
