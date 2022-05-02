@@ -1,7 +1,7 @@
 import pytest
 from django.urls import reverse
 from pypro.django_assertions import assert_contains
-from aperitivo.views import Video
+from aperitivo.models import Video
 from model_bakery import baker
 
 @pytest.fixture

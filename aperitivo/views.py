@@ -1,17 +1,10 @@
 from unittest.util import _MAX_LENGTH
 from django.shortcuts import render, get_object_or_404
-from .models import Video
+from aperitivo.models import Video
 
-
-        
-videos = [
-   Video(slug='motivacao',titulo='Video Aperitivo: Motivação', youtube_id='23tusPiiNZk'),
-   Video(slug='instalacao-windows', titulo='Instalação Windows', youtube_id='QZ1ASyiq-NQ'),
-]
-
-videos_dct = {v.slug: v for v in videos}  
 
 def indice(request):
+    videos = Video.objects.order_by('creation').all()
     return render(request, 'aperitivo/indice.html', context={'videos': videos})
 
 def video(request,slug):
