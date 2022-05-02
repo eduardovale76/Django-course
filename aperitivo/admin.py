@@ -1,3 +1,9 @@
-from django.contrib import admin
+from django.contrib.admin import ModelAdmin, register
+from aperitivo.models import Video
 
-# Register your models here.
+
+@register(Video)
+class VideoAdmin(ModelAdmin):
+    list_display =('titulo', 'slug', 'creation', 'youtube_id') 
+    ordering = ('creation',)
+    prepopulated_fields = {'slug':('titulo',)}

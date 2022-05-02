@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     #my apps
     'base.apps.BaseConfig',
     'aperitivo.apps.AperitivoConfig',
-    'modulos.apps.ModulosConfig',
+    'pypro.modulos.apps.ModulosConfig',
     #'base',
 ]
 
