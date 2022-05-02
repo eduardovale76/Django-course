@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     #my apps
     'base.apps.BaseConfig',
     'aperitivo.apps.AperitivoConfig',
+    'modulos.apps.ModulosConfig',
     #'base',
 ]
 
