@@ -1,8 +1,8 @@
 import pytest
 from django.urls import reverse
 from model_bakery import baker
-from django_assertions import assert_contains
-from modulos.models import Modulo
+from pypro.django_assertions import assert_contains
+from pypro.modulos.models import Modulo
 
 
 @pytest.fixture
