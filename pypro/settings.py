@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'aperitivo.apps.AperitivoConfig',
     'pypro.modulos.apps.ModulosConfig',
+    'ordered_model',
     #'base',
 ]
 
