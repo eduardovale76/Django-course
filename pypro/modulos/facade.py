@@ -1,5 +1,6 @@
 from pypro.modulos.models import Modulo, Aula
 from typing import List
+from django.db.models import Prefetch
 
 def lista_modulos_ordenados() -> List[Modulo]:
     """
@@ -20,4 +21,5 @@ def encontrar_aula(slug):
     return Aula.objects.select_related('modulo').get(slug=slug) # Só funciona quando tentamos acessar N para 1
 
 def listar_modulos_com_aulas():
-    return Modulo.objects.order_by('order').prefetch_related('aulas_set').all() # Só funciona para acessar 1 para N
+    aulas_ordenadas = Aula.objects.order_by('order')
+    return Modulo.objects.order_by('order').prefetch_related(Prefetch('aula_set', queryset=aulas_ordenadas, to_attr='aulas')).all() # Só funciona para acessar 1 para N
