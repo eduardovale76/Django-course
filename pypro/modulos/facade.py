@@ -17,4 +17,7 @@ def listar_aulas_de_modulo_ordenadas(modulo: Modulo):
     return list(modulo.aula_set.order_by('order').all())
 
 def encontrar_aula(slug):
-    return Aula.objects.get(slug=slug)
+    return Aula.objects.select_related('modulo').get(slug=slug) # Só funciona quando tentamos acessar N para 1
+
+def listar_modulos_com_aulas():
+    return Modulo.objects.order_by('order').prefetch_related('aulas_set').all() # Só funciona para acessar 1 para N
