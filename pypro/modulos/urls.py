@@ -1,4 +1,3 @@
-from mailbox import NotEmptyError
 from django.urls import path
 from pypro.modulos import views
 

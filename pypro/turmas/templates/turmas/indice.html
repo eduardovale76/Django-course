@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Indice de turmas{% endblock title %}
+{% block description %}Página com todas as turmas do curso Python Pro{% endblock description %}
+
+{% block body %}
+  
+    <div class="container">
+        {% for modulo in modulos %}
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="mt-4 mb-3">{{ modulo.titulo }}</h3>
+                    <dl>
+                        <dt>Público</dt>
+                            <dd>{{ modulo.publico }}</dd>
+                        <dt>Descrição</dt>
+                            <dd>{{ modulo.descricao }}</dd>
+                    </dl>
+                    <h4>:: Aulas</h4>
+                    <ol>
+                        {% for aula in modulo.aulas %}
+                            <li><a href='{{ aula.get_absolute_url }}'>{{ aula.titulo }} </a></li>
+                        {% endfor %}
+                    </ol>
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}
