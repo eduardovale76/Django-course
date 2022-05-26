@@ -20,10 +20,12 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contas/', include('django.contrib.auth.urls')),
     path('',include('base.urls')),
     path('aperitivo/', include('aperitivo.urls')),
     path('modulos/', include('pypro.modulos.urls')),
     path('turmas/', include('pypro.turmas.urls')),
+    
 ]
 
 if settings.DEBUG:
