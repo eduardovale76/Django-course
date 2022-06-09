@@ -2,7 +2,7 @@ import pytest
 from django.urls import reverse
 from model_bakery import baker
 from pypro.django_assertions import assert_contains, assert_not_contains
-from pypro import conftest
+from base import conftest
 
 
 @pytest.fixture
@@ -48,3 +48,9 @@ def test_botao_entrar_indisponivel(resp_home_com_usuario_logado):
     
 def test_link_login_indisponivel(resp_home_com_usuario_logado):
     assert_not_contains(resp_home_com_usuario_logado, reverse('login'))
+
+def test_botao_sair_indisponivel(resp_home_com_usuario_logado):
+    assert_contains(resp_home_com_usuario_logado, 'Sair')
+    
+def test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_logado):
+    assert_contains(resp_home_com_usuario_logado, usuario_logado.first_name)
