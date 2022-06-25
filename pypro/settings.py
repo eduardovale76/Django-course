@@ -42,6 +42,13 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+        #my apps
+    'base.apps.BaseConfig',
+    'aperitivo.apps.AperitivoConfig',
+    'pypro.modulos.apps.ModulosConfig',
+    'pypro.turmas.apps.TurmasConfig',
+    'ordered_model',
+    #'base',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,13 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
-    #my apps
-    'base.apps.BaseConfig',
-    'aperitivo.apps.AperitivoConfig',
-    'pypro.modulos.apps.ModulosConfig',
-    'pypro.turmas.apps.TurmasConfig',
-    'ordered_model',
-    #'base',
+
 ]
 
 
@@ -99,6 +100,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
+# Configuração de envio de Email
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+MAIL_USE_TLS = config('MAIL_USE_TLS')
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
